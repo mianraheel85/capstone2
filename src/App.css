@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color: rgb(1, 1, 79);
+  color: white;
+  padding: 20px 30px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10%;
+  position: sticky;
+  top: 0;
+}
+header > h1 {
+  cursor: pointer;
+}
+header > input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  flex: 1;
+}
+.links {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+}
+.links a {
+  text-transform: capitalize;
+  font-size: 20px;
   color: white;
+  text-decoration: none;
+}
+.links a:active {
+  color: rgb(240, 76, 104);
+}
+.cart {
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.productsHeading {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-transform: capitalize;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.cart p {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: rgb(240, 76, 104);
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+.card:hover {
+  box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.3);
+}
+.cardImage {
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  cursor: pointer;
+}
+.cardImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  flex: 1;
+  padding: 10px;
+}
+.category {
+  padding: 5px 15px;
+  background-color: #ccc;
+  border-radius: 30px;
+  align-self: flex-start;
+}
+.btn {
+  border: none;
+  background-color: rgb(1, 1, 79);
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.detailsImage {
+  flex: 0.3;
+}
+.detailsImage > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.detailsInfo {
+  flex: 0.5;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.cartContainer {
+  min-height: 80vh;
+  width: 70%;
+  margin: auto;
+  padding: 40px 20px;
+}
+.cartContainer .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cartContainer .total p {
+  font-size: 40px;
+}
+.cartContainer .cartProducts {
+  margin: 30px 0px;
+}
+.cartItem {
+  display: flex;
+  gap: 15px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0px;
+}
+.cartItem .imgCon {
+  height: 150px;
+  flex: 0.2;
+}
+.imgCon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.cartItem .info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.cartItem .qtyCon {
+  display: flex;
+  align-items: center;
+}
+.cartItem .qtyCon p {
+  margin: 0px 20px;
+}
+.cartItem .action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0.2;
+}
+.cartItem .action button {
+  background-color: rgb(169, 5, 5);
+}
+
+footer {
+  background-color: rgb(1, 1, 79);
+  color: white;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
 }
